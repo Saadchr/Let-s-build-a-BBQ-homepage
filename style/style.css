@@ -1,0 +1,188 @@
+@import url("https://fonts.googleapis.com/css2?family=Lora&family=Source+Sans+3:wght@300;400;900&family=Ubuntu:wght@400;700&display=swap");
+
+body {
+  margin: 0;
+  font-size: 1rem;
+  font-family: "Source Sans 3", sans-serif;
+  color: #404040;
+  text-align: center;
+}
+
+h1 {
+  font-size: 2.25rem;
+  color: #fff;
+  font-weight: 300;
+  margin: 0;
+  /* margin-bottom: 1em; */
+}
+
+strong {
+  font-weight: 900;
+}
+
+h2 {
+  font-size: 1.31125rem;
+  margin: 0;
+}
+
+h2 + p {
+  color: #f18119;
+  text-transform: uppercase;
+  font-weight: 900;
+  margin-top: 0;
+}
+
+h1 + p {
+  color: #f18119;
+  text-transform: uppercase;
+  font-weight: 900;
+  margin: 0;
+}
+
+.top-text {
+  color: #f18119;
+  text-transform: uppercase;
+  font-size: 0.625em;
+  border-top:#f18119 solid 4px;
+  margin-top: 0;
+  border-image: linear-gradient(to left, #ff713b, #ffa51d), 1;
+}
+
+.fine-print {
+  font-size: 0.625rem;
+  font-weight: 300;
+  letter-spacing: 1px;
+}
+
+/*Layout*/
+.intro {
+ 
+  background-image: url(../images/ribs.jpg), linear-gradient(45deg, red, blue);
+  background-size: cover;
+  background-blend-mode: multiply;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 0 0.5em 2em;
+  margin-top: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 40vh; /*Comme ca dans la version mobile les éléments s'étirent davantage*/
+}
+.intro > *,
+.main-content > * {
+  max-width: 400px;
+  margin-right: auto;
+  margin-left: auto; /*définir une taille de width désarrange le layout*/
+}
+
+/* ▫▫▫▫▫▫▫▫▫▫▫▫▫▫▫
+ * ┌─────────────┐
+ * │ Form layout │
+ * └─────────────┘
+ * ▫▫▫▫▫▫▫▫▫▫▫▫▫▫▫
+
+ */
+
+.email-collector {
+  width: 80%;
+  max-width: 200px;
+}
+
+input,
+button {
+  width: 100%; /*Ca prend tout son sens ici, car par défaut, le browser donne des propriétés à input et button*/
+  /*Ca prend tout son sens ici, car par défaut, le browser donne des propriétés à input et button*/
+  /*Ca prend tout son sens ici, car par défaut, le browser donne des propriétés à input et button*/
+  border-radius: 5px;
+  border: 1px solid #404040;
+}
+
+input {
+  margin-bottom: 0.75em;
+  padding: 0.25em;
+  font-family: inherit; /*Ca prend tout son sens ici, car par défaut, le browser donne des propriétés à input et button*/
+  text-align: inherit; /*Ca prend tout son sens ici, car par défaut, le browser donne des propriétés à input et button*/
+  border: 1px solid #404040;
+  border-radius: 5px;
+  transition: transform 250ms;
+  
+
+}
+
+.btn {
+  padding: 1em 1.5em;
+  text-transform: uppercase;
+  font-weight: 900;
+  font-size: 0.625rem;
+  letter-spacing: 1px;
+  border: 0;
+  cursor: pointer;
+}
+
+.btn-primary {
+    background: linear-gradient(to right, #ff713B, #ffa51d);
+    color: white;
+    transition: transform 250ms;
+}
+.btn-primary:hover,
+.btn-primary:focus{
+   
+    transform: scale(1.1);
+}
+
+
+input:hover{
+  transform: scale(1.05)
+}
+
+
+
+
+
+
+
+.top-text {
+  order: -1;
+}
+
+.main-content {
+  padding: 2em 1em;
+}
+
+@media (min-width: 600px) {
+  body {
+    font-size: 1.125rem;
+    display: flex;
+  }
+
+  body .intro,
+  body .main-content {
+    width: 50%;
+    height: 100vh;
+  }
+
+  h1 {
+    font-size: 3.5rem;
+  }
+  h2,
+  h1 + p {
+    font-size: 1.75rem;
+  }
+
+  .main-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  /* .intro{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    } */
+}
+
+* {
+  box-sizing: border-box;
+}
